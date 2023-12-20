@@ -5,9 +5,9 @@ const Contacts = ({ contacts }) => (
     <>
         <h1>Contacts</h1>
         <ListWrapper>
-            {contacts.map(({id, name}) => 
+            {contacts.map(({id, name, number}) => 
                 (<li key={id} className="TodoList__item">
-                    <p className="TodoList__text">{name}</p>
+                    <p className="TodoList__text">{name} {number}</p>
                 </li>)
             )}
         </ListWrapper>

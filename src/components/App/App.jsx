@@ -15,12 +15,14 @@ class App extends Component {
         this.setState({contact: event.currentTarget.value});
     };
 
-    addContact = ( text ) => {
+    addContact = ( text, number ) => {
         console.log("text", text);
+        console.log("number", number);
 
         const contact = {
             id: nanoid(),
             name: text,
+            number: number,
         }
 
         this.setState(({contacts}) => ({
